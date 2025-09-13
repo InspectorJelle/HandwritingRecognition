@@ -68,3 +68,12 @@ This forces the model to rely on multiple pathways for learning, which reduces o
 - **loss** – A measure of the error between the model’s prediction and the true label, which the optimizer tries to minimize.
 
 ---
+
+## Experiments
+
+### What happens if I change the Filter from 32 to 64?
+The total and trainable params went up to **243,914**. The time it took to train the model was doubled. 
+Both stopped after **Epoch 10/15** with very little improvement. 
+
+### What happens if I don't have any Dropout?
+The model took two more Epochs to train but the Output results where practicaly identical.
