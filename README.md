@@ -66,14 +66,38 @@ This forces the model to rely on multiple pathways for learning, which reduces o
 - **f1-score** – The harmonic mean of precision and recall. Useful when both need to be balanced.
 - **optimizer** – The algorithm that updates the model’s weights to minimize the loss function (e.g., Adam, SGD).
 - **loss** – A measure of the error between the model’s prediction and the true label, which the optimizer tries to minimize.
+- **accuracy** - A measure of correct predictions.
 
 ---
 
 ## Experiments
 
-### What happens if I change the Filter from 32 to 64?
+### What happens if I change the filter from 32 to 64?
 The total and trainable params went up to **243,914**. The time it took to train the model was doubled. 
 Both stopped after **Epoch 10/15** with very little improvement. 
 
 ### What happens if I don't have any Dropout?
 The model took two more Epochs to train but the Output results where practicaly identical.
+
+---
+
+## Short Summary
+
+To finalize my findings and deepen my understanding, I'll compare the data and highlight the correlations between each aspect.
+
+### Parameters and Efficiency
+
+The model uses **197,482** parameters and took **14s–18s** per epoch to train.  
+Doubling the filters increased the number of parameters and doubled the training time per epoch, with very little improvement in accuracy.
+
+### Train Loss / Accuracy and Validation Loss / Accuracy
+
+Since both training accuracy and validation accuracy increased while training loss and validation loss decreased, the model learns well — hence **no overfitting**.
+
+**Train Loss ↓, Val Loss ↓,  
+Train Accuracy ↑, Val Accuracy ↑  
+= No Overfitting.**
+
+### Test Accuracy
+
+The model achieved a test accuracy of **0.9926**, which indicates very strong generalization and suitability for similar datasets.
