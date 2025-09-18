@@ -77,7 +77,7 @@ The total and trainable params went up to **243,914**. The time it took to train
 Both stopped after **Epoch 10/15** with very little improvement. 
 
 ### What happens if I don't have any Dropout?
-The model took two more Epochs to train but the Output results where practicaly identical.
+The model took two more Epochs to train but the Output results where practically identical.
 
 ---
 
